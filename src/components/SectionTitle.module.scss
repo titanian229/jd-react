@@ -1,0 +1,12 @@
+@import '../styles/colours.scss';
+
+.sectionTitle {
+    text-align: center;
+    font-family: 'Orbitron';
+    color: $title;
+    background-color: $title-bg;
+    line-height: 2;
+    border-bottom: 6px solid $title-bottom;
+    text-shadow: 1px 1px 4px white;
+    margin-bottom: 1em;
+}

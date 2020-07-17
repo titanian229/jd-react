@@ -14,39 +14,41 @@ class Welcome extends React.Component {
     }
 
     componentDidMount() {
-        this.timeline = TimelineLite();
-
-        this.timeline.to(
-            this.earth,
-            {
-                delay: 3,
-                duration: 4,
-                y: '80vh',
-                opacity: 0,
-                ease: 'sine.in',
-            },
-            'earthFade'
-        );
-        this.timeline.from(
-            this.astronaut,
-            {
-                delay: 3,
-                duration: 4,
-                css: { scale: 0.4 },
-                ease: 'power1.inOut',
-            },
-            'earthFade'
-        );
-        this.timeline.from(
-            this.h1,
-            {
-                duration: 0.7,
-                x: 110,
-                opacity: 0,
-                ease: 'circ',
-            },
-            'name'
-        );
+        this.timeline = new TimelineLite({ paused: true });
+        this.timeline
+            .to(
+                this.earth,
+                4,
+                {
+                    delay: 3,
+                    duration: 4,
+                    y: '80vh',
+                    opacity: 0,
+                    ease: 'sine.in',
+                },
+                'earthFade'
+            )
+            .from(
+                this.astronaut,
+                {
+                    delay: 3,
+                    duration: 4,
+                    css: { scale: 0.4 },
+                    ease: 'power1.inOut',
+                },
+                'earthFade'
+            )
+            .from(
+                this.h1,
+                {
+                    duration: 0.7,
+                    x: 110,
+                    opacity: 0,
+                    ease: 'circ',
+                },
+                'name'
+            );
+        this.timeline.play()
         // this.timeline.from(
         //     'nav',
         //     {
@@ -70,8 +72,8 @@ class Welcome extends React.Component {
                     alt="Astronaut"
                     ref={(img) => (this.astronaut = img)}
                 />
-                <img id="earth" className={styles.earth} src={earth} alt="earth" ref={ img => this.earth = img } />
-                <h1 ref={ h1 => this.h1 = h1 }>
+                <img id="earth" className={styles.earth} src={earth} alt="earth" ref={(img) => (this.earth = img)} />
+                <h1 ref={(h1) => (this.h1 = h1)}>
                     <span className={styles.first}>James</span>
                     <br />
                     <span className={styles.midlight}>Lee</span>

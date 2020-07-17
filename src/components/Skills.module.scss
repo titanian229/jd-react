@@ -1,0 +1,43 @@
+@import '../styles/colours.scss';
+
+.skills {
+    text-align: center;
+    color: lighten($two, 40);
+
+    span + span::before {
+        content: '';
+        border-radius: 50%;
+        height: 0.6ch;
+        width: 0.6ch;
+        background-color: lighten($complementary-0, 20);
+        // border: 1px solid red;
+        display: inline-block;
+        margin: 0 0.5ch;
+        margin-bottom: 0.3ch;
+    }
+
+    p::before {
+        content: '<\A0';
+        color: lighten($complementary-0, 20);
+    }
+
+    p::after {
+        color: lighten($complementary-0, 20);
+        content: '\A0>';
+    }
+}
+
+.skill {
+    white-space: nowrap;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 0.6ch;
+    width: 0.6ch;
+    background-color: lighten($complementary-0, 20);
+    // border: 1px solid red;
+    display: inline-block;
+    margin: 0 0.5ch;
+    margin-bottom: 0.3ch;
+}

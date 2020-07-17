@@ -1,0 +1,30 @@
+
+$one: #0d0d0d;
+$two: #023859;
+$three: #4b7ba6;
+$four: #638ca6;
+$five: #9fb3bf;
+
+$complementary-0: #a66000;
+
+$main-bg: $one;
+
+$border: $four;
+
+$text: lighten($two, 55);
+$highlight-text: #222;
+
+$title: $one;
+$title-bg: $five;
+$title-bottom: $complementary-0;
+
+$project-title: $four;
+
+$accent-colour: black;
+
+$link: $four;
+$hover: $five;
+
+$neu-upper: hsl(213.4, 81.4%, 31.9%);
+$neu-lower: hsl(213.4, 81.4%, 1.9%);
+$neu-border: hsl(213.4, 81.4%, 16.9%);

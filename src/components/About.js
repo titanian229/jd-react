@@ -20,8 +20,9 @@ const Bio = (props) => {
 };
 
 const Contact = (props) => {
+    console.log(props.linkedin)
     return (
-        <div className="contact">
+        <div className={styles.contact}>
             <a href={props.github}>
                 <i className="fab fa-github"></i>
             </a>
@@ -43,7 +44,7 @@ const About = (props) => {
                 <div className={styles.bioSection}>
                     <Bio bio={props.bio} name={props.name} />
                     <p>{props.cta}</p>
-                    <Contact github={props.github} linkedin={props.github} email={props.email} />
+                    <Contact github={props.github} linkedin={props.linkedin} email={props.email} />
                 </div>
                 <div className={styles.photoSection}>
                     <img src={require(`../images/${props.img}`)} alt={props.name} />

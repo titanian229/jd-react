@@ -41,24 +41,24 @@
     color: lighten($complementary-0, 40);
 }
 
-// a {
-//     font-size: 3em;
-//     color: $five;
-//     transition: 0.3s;
-//     margin-right: 0.75em;
+a {
+    font-size: 3em;
+    color: $five;
+    transition: 0.3s;
+    margin-right: 0.75em;
 
-//     &:hover {
-//         color: lighten($complementary-0, 30);
-//     }
-// }
-// .contact {
-//     margin-top: 1em;
-//     padding: 0 3em;
-//     width: 100%;
-//     max-width: 60ch;
-//     display: flex;
-//     justify-content: space-around;
-// }
+    &:hover {
+        color: lighten($complementary-0, 30);
+    }
+}
+.contact {
+    margin-top: 1em;
+    padding: 0 3em;
+    width: 100%;
+    max-width: 60ch;
+    display: flex;
+    justify-content: space-around;
+}
 
 @media screen and (max-width: 700px) {
     #skills {

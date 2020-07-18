@@ -4,7 +4,7 @@ import Welcome from './components/Welcome';
 // import Nav from './components/Nav/Nav'
 import Container from './components/Container';
 import SectionTitle from './components/SectionTitle';
-import Skills from './components/Skills';
+// import Skills from './components/Skills';
 import About from './components/About'
 
 import './styles/global.scss';
@@ -34,11 +34,12 @@ function App() {
             {/* <Nav /> */}
             <Container>
                 <SectionTitle title="About" />
-                <Skills skills={skills} />
+                {/* <Skills skills={skills} /> */}
                 <About
                     name="James Lee"
                     bio={bio}
                     cta={cta}
+                    skills={skills}
                     github="https://github.com/titanian229"
                     linkedin="https://www.linkedin.com/in/jamestlee221/"
                     email="james@jamestlee.ca"

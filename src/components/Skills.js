@@ -11,7 +11,6 @@ const Skills = (props) => {
         ));
     });
     skillsList = skillsList.map((row, index) => <p key={index}>{row}</p>);
-    console.log(skillsList);
     return <div className={styles.skills}>{skillsList}</div>;
 };
 

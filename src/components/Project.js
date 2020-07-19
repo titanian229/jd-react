@@ -7,7 +7,7 @@ const Project = (props) => {
 
 
     return (
-        <div class={styles.projectCard}>
+        <div className={styles.projectCard}>
             <div className={styles.projectTitle}>
                 <h2>{name}</h2>
                 <img src={image} alt={name} />
@@ -20,8 +20,8 @@ const Project = (props) => {
                 </div>
             </div>
             <div className={styles.projectLinks}>
-                {liveLink ? <a href={liveLink}><i class="fas fa-anchor"></i></a> : ''}
-                {githubLink ? <a href={githubLink}><i class="fab fa-github"></i></a> : ''}
+                {liveLink ? <a href={liveLink}><i className="fas fa-anchor"></i></a> : ''}
+                {githubLink ? <a href={githubLink}><i className="fab fa-github"></i></a> : ''}
             </div>
         </div>
     );

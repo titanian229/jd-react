@@ -18,7 +18,6 @@ const Bio = (props) => {
 };
 
 const Contact = (props) => {
-    console.log(props.linkedin);
     return (
         <div className={styles.contact}>
             <a href={props.github}>

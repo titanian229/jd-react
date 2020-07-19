@@ -1,0 +1,10 @@
+@import '../styles/colours.scss';
+
+.projectsContainer {
+    margin: 0 10vw;
+
+    display: grid;
+    align-items: top;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-gap: 3rem;
+}

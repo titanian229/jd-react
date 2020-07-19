@@ -5,10 +5,8 @@ import styles from './About.module.scss';
 import Skills from './Skills';
 
 const Bio = (props) => {
-    let bioText = props.bio.split('\n\n');
-    // bioText = reactStringReplace(bioText, props.name, (match) => (<span className={styles.name}>{props.name}</span>))
-    // bioText = bioText.replace(props.name, <span className={styles.name}>{props.name}</span>)
-    return bioText.map((paragraph, index) => (
+    
+    return props.bio.map((paragraph, index) => (
         <p key={index}>
             {reactStringReplace(paragraph, props.name, (match) => (
                 <span key={props.name + String(index)} className={styles.name}>
@@ -20,7 +18,7 @@ const Bio = (props) => {
 };
 
 const Contact = (props) => {
-    console.log(props.linkedin)
+    console.log(props.linkedin);
     return (
         <div className={styles.contact}>
             <a href={props.github}>

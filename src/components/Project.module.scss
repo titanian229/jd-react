@@ -1,0 +1,95 @@
+@import '../styles/colours.scss';
+
+
+.projectCard {
+    // width: 30vw;
+    // background-color: lighten($one, 5);
+    // background-color: $five;
+    background-color: lighten($one, 5);
+    color: darken($five, 0);
+    transition: 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .projectText {
+        padding: 0 2em 2em;
+        // height: 100%;
+
+        p + p {
+            margin-top: 1em;
+        }
+    }
+
+    .projectTitle {
+        margin-bottom: 1.5em;
+        padding: 1em 1em;
+        background-color: $four;
+        color: black;
+        position: relative;
+        height: 6em;
+        text-shadow: 1px 1px 4px $five;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 90px;
+            height: 90px;
+            // display: none;
+            border-radius: 80px;
+            position: relative;
+            top: 3em;
+            right: 1em;
+            border: 4px solid lighten($one, 5);
+            transition: all 0.3s;
+
+            &:hover {
+                width: 140px;
+                height: 140px;
+                border: 4px solid $complementary-0;
+            }
+        }
+    }
+
+    .projectHeadline {
+        font-style: italic;
+        // color: lighten($text, 10);
+        // color: darken(complement($five), 30);
+        color: $complementary-0;
+        width: 70%;
+    }
+
+    ul {
+        margin-left: 1em;
+        margin-top: 1em;
+        list-style-type: none;
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    li {
+        padding: 0.4em;
+        border: 1px solid $two;
+        border-radius: 4px;
+        margin: 0.4em;
+        // color: $complementary-0;
+    }
+
+    .projectLinks {
+        bottom: 0;
+        // outline: 1px solid red;
+        font-size: 3em;
+        margin-top: auto;
+        padding: 0.5em 1em;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: $complementary-0;
+        }
+    }
+}

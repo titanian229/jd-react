@@ -19,6 +19,12 @@ const James = {
         ['HTML5', 'CSS3', 'JavaScript ES6', 'Python', 'SQL', 'Git', 'MongoDB / Express / React / Node.js (MERN) Stack'],
         ['Handlebars.js', 'Bootstrap', 'Semantic UI', 'Sass'],
     ],
+    github: 'https://github.com/titanian229',
+    linkedin: 'https://www.linkedin.com/in/jamestlee221/',
+    email: 'james@jamestlee.ca',
+    imgPrimary: 'JamesLeeOp.png',
+    imgAlt: 'jamesAndMouse.jpg',
+    resume: 'JamesLeeResume.pdf',
     projects: [
         {
             name: 'EcoRoute',
@@ -113,7 +119,10 @@ const James = {
         },
     ],
 };
-// Person.deleteMany({})
+// Person.deleteMany({}).then((data) => {
+//     console.log(data);
+//     process.exit(0);
+// });
 
 Person.create(James)
     .then((data) => {

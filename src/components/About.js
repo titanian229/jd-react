@@ -1,10 +1,12 @@
 import React from 'react';
 import reactStringReplace from 'react-string-replace';
+import useAxios from 'axios-hooks'
 
 import styles from './About.module.scss';
 import Skills from './Skills';
 
 const Bio = (props) => {
+
     
     return props.bio.map((paragraph, index) => (
         <p key={index}>
@@ -34,17 +36,25 @@ const Contact = (props) => {
 };
 
 const About = (props) => {
+    const [{data, loading, error}, refetch] = useAxios('/api/James%20Lee/about')
+
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error!</p>
+
+    const {skills, bio, cta, linkedin, github, email, imgPrimary, name} = data;
+
+
     return (
         <>
-            <Skills skills={props.skills} />
+            <Skills skills={skills} />
             <div className={styles.container}>
                 <div className={styles.bioSection}>
-                    <Bio bio={props.bio} name={props.name} />
-                    <p>{props.cta}</p>
-                    <Contact github={props.github} linkedin={props.linkedin} email={props.email} />
+                    <Bio bio={bio} name={name} />
+                    <p>{cta}</p>
+                    <Contact github={github} linkedin={linkedin} email={email} />
                 </div>
                 <div className={styles.photoSection}>
-                    <img src={require(`../images/${props.img}`)} alt={props.name} />
+                    <img src={require(`../images/${imgPrimary}`)} alt={name} />
                 </div>
             </div>
         </>

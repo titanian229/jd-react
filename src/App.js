@@ -7,7 +7,8 @@ import SectionTitle from './components/SectionTitle';
 import About from './components/About';
 import ProjectsContainer from './components/ProjectsContainer';
 import Contact from './components/Contact';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import useAxios from 'axios-hooks';
 
 import './styles/global.scss';
 
@@ -139,6 +140,13 @@ const projectsList = [
 ];
 
 function App() {
+    const [{ data, loading, error }, refetch] = useAxios('/api/James%20Lee');
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error!</p>;
+
+    const { name, bio, cta, skills, github, linkedin, email, imgPrimary, imgAlt, resume, projects } = data;
+
     return (
         <div className="App">
             <Welcome />
@@ -146,26 +154,19 @@ function App() {
             <Container>
                 <SectionTitle title="About" />
                 <About
-                    name="James Lee"
+                    name={name}
                     bio={bio}
                     cta={cta}
                     skills={skills}
-                    github="https://github.com/titanian229"
-                    linkedin="https://www.linkedin.com/in/jamestlee221/"
-                    email="james@jamestlee.ca"
-                    img="JamesLeeOp.png"
+                    github={github}
+                    linkedin={linkedin}
+                    email={email}
+                    img={imgPrimary}
                 />
                 <SectionTitle title="My Projects" />
-                <ProjectsContainer projectsList={projectsList} />
+                <ProjectsContainer projectsList={projects} />
                 <SectionTitle title="Contact Me" />
-                <Contact
-                    image="jamesAndMouse.jpg"
-                    name="James Lee"
-                    email="james@jamestlee.ca"
-                    github="https://github.com/titanian229"
-                    linkedin="https://www.linkedin.com/in/jamestlee221/"
-                    resume="JamesLeeResume.pdf"
-                />
+                <Contact image={imgAlt} name={name} email={email} github={github} linkedin={linkedin} resume={resume} />
 
                 <Footer />
             </Container>

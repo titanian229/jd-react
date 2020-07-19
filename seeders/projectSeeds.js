@@ -1,11 +1,11 @@
-let mongoose = require('mongoose');
-let Person = require('../models/Person');
+// let mongoose = require('mongoose');
+// let Person = require('../models/Person');
 
-mongoose.connect('mongodb://localhost/jamesdeveloping', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-});
+// mongoose.connect('mongodb://localhost/jamesdeveloping', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: false,
+// });
 
 const James = {
     name: 'James Lee',
@@ -124,9 +124,10 @@ const James = {
 //     process.exit(0);
 // });
 
-Person.create(James)
-    .then((data) => {
-        console.log(data);
-        process.exit(0);
-    })
-    .catch((err) => console.log(err));
+// Person.create(James)
+//     .then((data) => {
+//         console.log(data);
+//         process.exit(0);
+//     })
+//     .catch((err) => console.log(err));
+module.exports = James

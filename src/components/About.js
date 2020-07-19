@@ -5,7 +5,6 @@ import styles from './About.module.scss';
 import Skills from './Skills';
 
 const Bio = (props) => {
-    
     return props.bio.map((paragraph, index) => (
         <p key={index}>
             {reactStringReplace(paragraph, props.name, (match) => (

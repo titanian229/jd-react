@@ -167,7 +167,6 @@ function App() {
                 <ProjectsContainer projectsList={projects} />
                 <SectionTitle title="Contact Me" />
                 <Contact image={imgAlt} name={name} email={email} github={github} linkedin={linkedin} resume={resume} />
-
                 <Footer />
             </Container>
         </div>

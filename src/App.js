@@ -6,6 +6,8 @@ import Container from './components/Container';
 import SectionTitle from './components/SectionTitle';
 import About from './components/About';
 import ProjectsContainer from './components/ProjectsContainer';
+import Contact from './components/Contact';
+import Footer from './components/Footer'
 
 import './styles/global.scss';
 
@@ -153,66 +155,19 @@ function App() {
                     email="james@jamestlee.ca"
                     img="JamesLeeOp.png"
                 />
-
-                {/* <div id="about-container">
-                    <div>
-                        <p>
-                            Hello, I'm <span className="highlight">James Lee</span>. I'm a full stack web developer,
-                            based in Toronto. I'm focused on clean, efficient, and easily expandable code.
-                        </p>
-                        <p>
-                            I first encountered programming by exploring it myself, creating software to automate my
-                            life and work and improve the things I encountered day to day. Mapping and planning the
-                            routes I kayak, automating the bulky process of creating GCal events around work schedules,
-                            android applications to take my software on the go with me. I taught myself by exploring
-                            documentation, picking things apart and playing with new ways to code and new design
-                            patterns. I found my passion in it. I’m always growing my skill set taking online and
-                            physical classes, most recently a University of Toronto coding bootcamp.
-                        </p>
-                        <p>Contact me, and let’s see how we can put my passion to work for you.</p>
-                        <div className="contact">
-                            <a href="https://github.com/titanian229">
-                                <i className="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/jamestlee221/">
-                                <i className="fab fa-linkedin"></i>
-                            </a>
-                            <a href="mailto:james@jamestlee.ca">
-                                <i className="fa fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="./images/JamesLeeOp.png" alt="James Lee" />
-                    </div>
-                </div> */}
                 <SectionTitle title="My Projects" />
                 <ProjectsContainer projectsList={projectsList} />
-                {/* <Projects projectList={projectsList} /> */}
                 <SectionTitle title="Contact Me" />
-                <div id="contact-container">
-                    <div>
-                        <img src="./images/jamesAndMouse.jpg" alt="James Lee" />
-                    </div>
-                    <div>
-                        <p>
-                            You can reach me at <a href="mailto:james@jamestlee.ca">james@jamestlee.ca</a>
-                        </p>
-                        <p>
-                            Find me on <a href="https://www.linkedin.com/in/jamestlee221/">LinkedIn</a>
-                        </p>
-                        <p>
-                            See my work on <a href="https://github.com/titanian229">GitHub</a>
-                        </p>
-                        <p>
-                            Download my{' '}
-                            <a href="./images/JamesLeeResume.pdf" download>
-                                resume
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                <footer>&copy; 2020 James T Lee</footer>
+                <Contact
+                    image="jamesAndMouse.jpg"
+                    name="James Lee"
+                    email="james@jamestlee.ca"
+                    github="https://github.com/titanian229"
+                    linkedin="https://www.linkedin.com/in/jamestlee221/"
+                    resume="JamesLeeResume.pdf"
+                />
+
+                <Footer />
             </Container>
         </div>
     );

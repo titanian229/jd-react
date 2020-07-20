@@ -3,6 +3,7 @@
 .skills {
     text-align: center;
     color: lighten($two, 40);
+    margin-bottom: 2em;
 
     span + span::before {
         content: '';
@@ -38,4 +39,11 @@
     display: inline-block;
     margin: 0 0.5ch;
     margin-bottom: 0.3ch;
+}
+
+@media screen and (max-width: 700px) {
+    .skill {
+        white-space: normal;
+        font-size: 0.9em;
+    }
 }

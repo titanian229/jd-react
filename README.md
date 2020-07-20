@@ -1,4 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# James Developing MERN Stack CMS
+
+This is a version of my personal webpage, created using the full MERN stack.  The front end is a React application, using hooks and the latest React methodologies.  The GSAP animation library is also used for subtle animations.  The React application uses axios-hooks to call on my API (served using Express) to get data from my MongoDB database, to personalize the page for myself, loading my biographical data and data about each of my projects.  It is deployed here: https://james-developing.herokuapp.com/
+
+## Technologies
+
+* Node.js
+* Express
+* MongoDB
+* React
+* Mongoose
+* Axios
+
+## Usage
+
+
+
+
+
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -66,3 +86,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+ -->

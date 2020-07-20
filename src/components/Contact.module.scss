@@ -27,3 +27,19 @@
         color: $hover;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .contactContainer {
+        flex-direction: column;
+        margin: 0 10px;
+
+        > div:first-of-type {
+            width: 100%;
+        }
+
+        > div:nth-child(2) {
+            width: 100%;
+        }
+
+    }
+}

@@ -2,9 +2,7 @@
 
 
 .projectCard {
-    // width: 30vw;
-    // background-color: lighten($one, 5);
-    // background-color: $five;
+
     background-color: lighten($one, 5);
     color: darken($five, 0);
     transition: 0.3s;
@@ -55,8 +53,6 @@
 
     .projectHeadline {
         font-style: italic;
-        // color: lighten($text, 10);
-        // color: darken(complement($five), 30);
         color: $complementary-0;
         width: 70%;
     }
@@ -81,7 +77,6 @@
 
     .projectLinks {
         bottom: 0;
-        // outline: 1px solid red;
         font-size: 3em;
         margin-top: auto;
         padding: 0.5em 1em;
@@ -91,5 +86,33 @@
         a {
             color: $complementary-0;
         }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .projectCard {
+        img {
+            display: none;
+        }
+
+        .projectTitle {
+            width: 100%;
+            text-align: center;
+        }
+
+        .projectHeadline {
+            width: 100%;
+        }
+
+        .projectText {
+            padding: 0 0.5em;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
     }
 }

@@ -33,7 +33,6 @@
         width: 100%;
         border-bottom: 6px solid $three;
         border-radius: 5px;
-        // border: 2px solid $text;
     }
 }
 
@@ -62,15 +61,14 @@
 }
 
 @media screen and (max-width: 700px) {
-    #skills {
-        font-size: 0.8em;
-    }
 
     .container {
+
         flex-direction: column;
+        margin: 0 10px;
+
         .bioSection {
             width: 100%;
-            margin-right: 2.5em;
         }
 
         .photoSection {
@@ -78,14 +76,15 @@
             width: 100%;
         }
     }
-    #contact-container {
-        flex-direction: column-reverse;
-        div:first-of-type {
-            width: 90%;
-        }
-        div:nth-child(2) {
-            margin: 1em;
-            width: 90%;
-        }
-    }
+
+    // #contact-container {
+    //     flex-direction: column-reverse;
+    //     div:first-of-type {
+    //         width: 90%;
+    //     }
+    //     div:nth-child(2) {
+    //         margin: 1em;
+    //         width: 90%;
+    //     }
+    // }
 }

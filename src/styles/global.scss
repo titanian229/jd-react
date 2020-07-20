@@ -13,9 +13,6 @@ body {
     font-size: 80%;
 }
 
-
-
-
 // UTILITY CLASSES
 
 .come-in {
@@ -38,25 +35,25 @@ body {
     display: table;
 }
 
-@media screen and (max-width: 700px) {
-    #skills {
-        font-size: 0.8em;
-    }
-    #contact-container {
-        flex-direction: column-reverse;
-        div:first-of-type {
-            width: 90%;
-        }
-        div:nth-child(2) {
-            margin: 1em;
-            width: 90%;
+// @media screen and (max-width: 700px) {
+//     #skills {
+//         font-size: 0.8em;
+//     }
+//     #contact-container {
+//         flex-direction: column-reverse;
+//         div:first-of-type {
+//             width: 90%;
+//         }
+//         div:nth-child(2) {
+//             margin: 1em;
+//             width: 90%;
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
-@media screen and (max-width: 600px) {
-    .main-container {
-        margin: 0 3vw;
-    }
-}
+// @media screen and (max-width: 600px) {
+//     .main-container {
+//         margin: 0 3vw;
+//     }
+// }
